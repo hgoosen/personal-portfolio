@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Project({ title, desc } : { title: string, desc: string }) {
   return (
     <div className="bg-(--highlight) rounded-md p-3 m-3 w-xs ">
@@ -12,7 +14,9 @@ function Projects() {
     <div>
       <h2>Projects</h2>
       <div className="border border-(--shadow) rounded-md p-px m-3">
-        <Project title={"Budget Tracker"} desc={"C-based program that uses CLI input to manage a budget."} />
+        <Link href="/projects/budget-tracker">
+          <Project title={"Budget Tracker"} desc={"C-based program that uses CLI input to manage a budget."} />
+        </Link>
       </div>
     </div>
   )
